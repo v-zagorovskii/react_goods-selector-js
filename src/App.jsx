@@ -41,9 +41,9 @@ export const App = () => {
           {goods.map(good => (
             <tr
               data-cy="Good"
-              className={`${value.toString() === good ? 'has-background-success-light' : ''}`}
+              className={`${value === good ? 'has-background-success-light' : ''}`}
             >
-              {good === value.toString() ? (
+              {good === value ? (
                 <td>
                   <button
                     data-cy="RemoveButton"
@@ -62,7 +62,7 @@ export const App = () => {
                     type="button"
                     className="button"
                     onClick={() => {
-                      setValue(`${good}`);
+                      setValue(good);
                     }}
                   >
                     +
