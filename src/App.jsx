@@ -40,6 +40,7 @@ export const App = () => {
         <tbody>
           {goods.map(good => (
             <tr
+              key={good.id}
               data-cy="Good"
               className={`${value === good ? 'has-background-success-light' : ''}`}
             >
